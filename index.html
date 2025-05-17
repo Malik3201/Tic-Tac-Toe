@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Neon Tic Tac Toe</h1>
+            <div class="user-info">
+                <span id="player-name">Player</span>
+                <button id="change-name" class="glow-button small">Change Name</button>
+            </div>
+        </header>
+
+        <div id="welcome-screen" class="screen active">
+            <div class="game-modes">
+                <button id="vs-computer" class="glow-button large">
+                    <i class="fas fa-robot"></i> Play vs Computer
+                </button>
+                <button id="vs-friend" class="glow-button large">
+                    <i class="fas fa-user-friends"></i> Play with Friend
+                </button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-info">
+                <div id="status-message" class="status-message">Your Turn</div>
+                <div id="room-info" class="room-info hidden">
+                    <span>Room: </span>
+                    <span id="room-id"></span>
+                    <button id="copy-link" class="glow-button small">Copy Link</button>
+                </div>
+            </div>
+            
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+                <div class="win-line" id="win-line"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-game" class="glow-button">Restart Game</button>
+                <button id="back-to-menu" class="glow-button">Back to Menu</button>
+            </div>
+        </div>
+
+        <div id="nickname-modal" class="modal">
+            <div class="modal-content">
+                <h2>Enter your nickname</h2>
+                <input type="text" id="nickname-input" maxlength="15" placeholder="Your nickname...">
+                <button id="save-nickname" class="glow-button">Start Playing</button>
+            </div>
+        </div>
+
+        <div id="result-modal" class="modal">
+            <div class="modal-content result">
+                <h2 id="result-message">You Win!</h2>
+                <div class="result-animation"></div>
+                <button id="play-again" class="glow-button">Play Again</button>
+                <button id="result-menu" class="glow-button">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="waiting-modal" class="modal">
+            <div class="modal-content">
+                <h2>Waiting for opponent...</h2>
+                <div class="loading-spinner"></div>
+                <p>Share this link with your friend:</p>
+                <div class="share-link">
+                    <input type="text" id="share-url" readonly>
+                    <button id="copy-share-link" class="glow-button small">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Neon Tic Tac Toe &copy; 2023</p>
+    </footer>
+
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/ai.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/multiplayer.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html> 

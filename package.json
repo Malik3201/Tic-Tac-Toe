@@ -1,0 +1,20 @@
+{
+  "name": "neon-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A neon-themed Tic Tac Toe game with multiplayer and AI capabilities",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "game",
+    "tic-tac-toe",
+    "multiplayer",
+    "neon",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+} 

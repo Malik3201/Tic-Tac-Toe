@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 
+                0 0 5px #00f3ff,
+                0 0 10px #00f3ff,
+                0 0 15px #00f3ff;
+            animation: flicker 3s infinite alternate;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        a {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #00f3ff;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px #00f3ff;
+            text-shadow: 0 0 5px #00f3ff;
+        }
+        
+        a:hover {
+            background-color: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+            transform: translateY(-2px);
+        }
+        
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 
+                    0 0 5px #00f3ff,
+                    0 0 10px #00f3ff,
+                    0 0 15px #00f3ff,
+                    0 0 20px #00f3ff;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>404 - Game Over</h1>
+    <p>The page you're looking for has disappeared into the neon void.</p>
+    <a href="/">Back to Home</a>
+</body>
+</html> 
